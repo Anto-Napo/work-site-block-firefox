@@ -1,15 +1,19 @@
 function changeButtonLanguage(language) {
   const activateButton = document.getElementById('activateButton');
   const deactivateButton = document.getElementById('deactivateButton');
+  const questionsButton = document.getElementById('link');
   if(language === 'fr') {
     activateButton.textContent = "Activer";
     deactivateButton.textContent = "Desactiver";
+    questionsButton.textContent = "Des questions? Cree simplement une issue!";
   } else if(language === 'es') {
     activateButton.textContent = "Permitir";
     deactivateButton.textContent = "Desactivar";
+    questionsButton.textContent = "Alguna pregunta? Simplemente crea un issue!";
   } else if(language === 'en') {
     activateButton.textContent = "Activate";
     deactivateButton.textContent = "Deactivate";
+    questionsButton.textContent = "Any questions? Just create an issue!";
   }
 }
 
