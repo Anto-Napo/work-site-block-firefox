@@ -1,10 +1,10 @@
-# Block Sites for work
+# Block Sites For Work
 
 ## Overview
-*Block Sites for work* remove the ability to access the following websites by blocking their content from appearing, so it enables you to work with fewer distractions: YouTube, GitHub, Twitch, Poki, FRVR, Steam, Reddit, Discord, and Speedrun.com.
+*Block Sites For Work* remove the ability to access the following websites by blocking their content from appearing, so it enables you to work with fewer distractions: YouTube, GitHub, Twitch, Poki, FRVR, Steam, Reddit, Discord, and Speedrun.com.
 
 ## Installation for developpers
-To install the *Block Sites for work* extension, follow these steps:
+To install the *Block Sites For Work* extension, follow these steps:
 
 1. Download the extension files from the [GitHub repository](https://github.com/Anto-Napo/work-site-block-firefox).
 
@@ -18,13 +18,13 @@ To install the *Block Sites for work* extension, follow these steps:
 
 6. Navigate to the folder where you downloaded the extension files, and select the `manifest.json` file.
 
-The *Block Sites for work* extension is now installed and active.
+The *Block Sites For Work* extension is now installed and active.
 
 ## How to Use
-Once the *Block Sites for work* extension is installed, you'll have to click on the popup and activate it in order to block website specified in the [manifest.json](manifest.json) file. You can also select a language in the same popup.
+Once the *Block Sites For Work* extension is installed, you'll have to click on the popup and activate it in order to block website specified in the [manifest.json](manifest.json) file. You can also select a language in the same popup.
 
 ## Uninstalling
-To uninstall the *Block Sites for work* extension, follow these steps:
+To uninstall the *Block Sites For Work* extension, follow these steps:
 
 1. Open Firefox.
 
@@ -32,9 +32,9 @@ To uninstall the *Block Sites for work* extension, follow these steps:
 
 3. Select "Add-ons."
 
-4. Find the *Block Sites for work* extension in the list of installed extensions.
+4. Find the *Block Sites For Work* extension in the list of installed extensions.
 
-5. Click the "Remove" button next to the *Block Sites for work* extension.
+5. Click the "Remove" button next to the *Block Sites For Work* extension.
 
 The extension will be removed from your Firefox browser.
 

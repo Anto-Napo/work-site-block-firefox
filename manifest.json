@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Block Sites for work",
+  "name": "Block Sites For Work",
   "version": "1.0",
 
-  "description": "Remove the ability to access the following websites by blocking their content from appearing, so it enables you to work with fewer distractions: YouTube, GitHub, Twitch, Poki, FRVR, Steam, Reddit, Discord, and Speedrun.com. To start the extension, simply press the button on the popup.",
+  "description": "Block these sites to reduce distractions: YouTube, GitHub, Twitch, Poki, FRVR, Steam, Reddit, Discord, and Speedrun.com.",
   "homepage_url": "https://github.com/Anto-Napo/work-site-block-firefox",
 
   "icons": {
