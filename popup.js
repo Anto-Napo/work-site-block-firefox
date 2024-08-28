@@ -2,18 +2,22 @@ function changeButtonLanguage(language) {
   const activateButton = document.getElementById('activateButton');
   const deactivateButton = document.getElementById('deactivateButton');
   const questionsButton = document.getElementById('link');
+  const languageSelect = document.getElementById('lg-select-txt');
   if(language === 'fr') {
-    activateButton.textContent = "Activer";
-    deactivateButton.textContent = "Desactiver";
-    questionsButton.textContent = "Des questions? Cree simplement une issue!";
+    activateButton.innerHTML = "Activer";
+    deactivateButton.innerHTML = "D&eacute;sactiver";
+    languageSelect.innerHTML = "S&eacute;lectionne une langue:";
+    questionsButton.innerHTML = "Des questions? Cr&eacute;e simplement une issue!";
   } else if(language === 'es') {
-    activateButton.textContent = "Permitir";
-    deactivateButton.textContent = "Desactivar";
-    questionsButton.textContent = "Alguna pregunta? Simplemente crea un issue!";
+    activateButton.innerHTML = "Permitir";
+    deactivateButton.innerHTML = "Desactivar";
+    languageSelect.innerHTML = "Seleccione un idioma:";
+    questionsButton.innerHTML = "&iquest;Alguna pregunta? &iexcl;Simplemente crea un issue!";
   } else if(language === 'en') {
-    activateButton.textContent = "Activate";
-    deactivateButton.textContent = "Deactivate";
-    questionsButton.textContent = "Any questions? Just create an issue!";
+    activateButton.innerHTML = "Activate";
+    deactivateButton.innerHTML = "Deactivate";
+    languageSelect.innerHTML = "Select a language:";
+    questionsButton.innerHTML = "Any questions? Just create an issue!";
   }
 }
 
