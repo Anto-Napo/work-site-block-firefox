@@ -52,3 +52,17 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-No
 Complete license in the link bellow or in the [license file](LICENSE).
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+# Patch Note
+
+## V1
+
+### V1.0
+
+First instance of the extension.
+
+### V1.1
+
+* Added special characters as accents for french and reversed interrogation and exclamation point for spanish.
+
+* Added a missing feature of the translation where the text for changing the language was only available in english.
