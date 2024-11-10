@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Block Sites For Work",
-  "version": "1.1",
+  "version": "2.0",
 
   "description": "Block these sites to reduce distractions: YouTube, GitHub, Twitch, Poki, FRVR, Steam, Reddit, Discord, and Speedrun.com.",
   "homepage_url": "https://github.com/Anto-Napo/work-site-block-firefox",

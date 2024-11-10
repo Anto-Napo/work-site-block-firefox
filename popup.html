@@ -11,13 +11,31 @@
       <button id="activateButton">Activate</button>
       <button id="deactivateButton">Deactivate</button>
     </div>
+
     <div class="part">
-      <label id="lg-select-txt" for="dropdown">Select a language:</label>
-      <select id="dropdown">
+      <label id="lg-select-txt" for="languageDropdown">Select a language:</label>
+      <select id="languageDropdown">
           <option value="en">English</option>
           <option value="fr">Fran&ccedil;ais</option>
           <option value="es">Espanol</option>
       </select>
+    </div>
+
+    <div class="part">
+      <label id="forcedActivateText" for="forcedDropdown">Forced deactivation time:</label>
+      <select id="forcedDropdown">
+          <option value="30s">30s</option>
+          <option value="1m">1min</option>
+          <option value="5m">5min</option>
+          <option value="10m">10min</option>
+          <option value="15m">15min</option>
+          <option value="30m">30min</option>
+          <option value="45m">45min</option>
+          <option value="1h">1h</option>
+          <option value="1h15m">1h15min</option>
+          <option value="1h30m">1h30min</option>
+      </select>
+      <button id="forcedActivateButton">Activate</button>
     </div>
 
     <a class="part" id="link" href="https://github.com/Anto-Napo/work-site-block-firefox/issues">Any questions? Just create an issue!</a>
