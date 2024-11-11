@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Block Sites For Work",
-  "version": "2.0",
+  "version": "2.1",
 
   "description": "Block these sites to reduce distractions: YouTube, GitHub, Twitch, Poki, FRVR, Steam, Reddit, Discord, and Speedrun.com.",
   "homepage_url": "https://github.com/Anto-Napo/work-site-block-firefox",
@@ -28,7 +28,30 @@
         "https://www.reddit.com/*",
         "https://www.discord.com/*",
         "https://www.discord.gg/*",
-        "https://www.speedrun.com/*"
+        "https://www.speedrun.com/*",
+        "https://www.facebook.com/*",
+        "https://www.twitter.com/*",
+        "https://www.x.com/*",
+        "https://www.instagram.com/*",
+        "https://www.tumblr.com/*",
+        "https://www.snapchat.com/*",
+        "https://www.netflix.com/*",
+        "https://www.hulu.com/*",
+        "https://www.amazon.com/Prime-Video/*",
+        "https://www.crunchyroll.com/*",
+        "https://www.vimeo.com/*",
+        "https://www.buzzfeed.com/*",
+        "https://www.news.ycombinator.com/*",
+        "https://www.digg.com/*",
+        "https://www.amazon.com/*",
+        "https://www.ebay.com/*",
+        "https://www.etsy.com/*",
+        "https://www.aliexpress.com/*",
+        "https://www.9gag.com/*",
+        "https://www.cheezburger.com/*",
+        "https://www.ifunny.co/*",
+        "https://www.miniclip.com/*",
+        "https://www.kongregate.com/*"
       ],
       "js": ["index.js"]
     }

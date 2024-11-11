@@ -149,6 +149,18 @@ browser.storage.local.get(["bsfw-blocking", "bsfw-blocking-endtime"]).then((resu
   }
 });
 
+// If the value of the dropdown is somehow empty
+browser.storage.local.get("bsfw-blocking-text").then((result) => {
+  const text = result["bsfw-blocking-text"];
+  const dropdown = document.getElementById('forcedDropdown');
+  if(!text) {
+    browser.storage.local.set({ "bsfw-blocking-text": "30s" }).then(() => {
+      dropdown.value = "30s";
+    }).catch((error) => {
+      console.error("Error activating the block:", error);
+    });
+  }
+});
 
 // MISC FUNCTIONS
 function getCurrentTime() {
