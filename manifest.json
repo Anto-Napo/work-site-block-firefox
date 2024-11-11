@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "name": "Block Sites For Work",
-  "version": "2.1",
+  "version": "2.2",
 
-  "description": "Block these sites to reduce distractions: YouTube, GitHub, Twitch, Poki, FRVR, Steam, Reddit, Discord, and Speedrun.com.",
+  "description": "Block Sites For Work remove the ability to access the following websites by blocking their content from appearing, so it enables you to work with fewer distractions whenever you want: YouTube, GitHub, Twitch, Poki, FRVR, Steam, Reddit, Discord, Speedrun, Facebook, X, Instagra, Tumblr, Snapchat, Netflix, Hulu, Amazon, Crunchyroll, Vimeo, Buzzfeed, Ycombinator, Digg, Ebay, Etsy, Aliexpress, 9gag, Cheezburger, Ifunny, Miniclip and Kongregate. Three languages are available : english, french and spanish.",
   "homepage_url": "https://github.com/Anto-Napo/work-site-block-firefox",
 
   "icons": {

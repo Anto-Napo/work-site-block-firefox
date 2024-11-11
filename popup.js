@@ -33,6 +33,7 @@ function changeLanguage(language) {
 // Setting activation state
 document.getElementById('activateButton').addEventListener('click', () => {
   browser.storage.local.set({ "bsfw-activated": true }).then(() => {
+    changeTitleColor();
   }).catch((error) => {
     console.error("Error setting activation state:", error);
   });
@@ -40,6 +41,7 @@ document.getElementById('activateButton').addEventListener('click', () => {
 
 document.getElementById('deactivateButton').addEventListener('click', () => {
   browser.storage.local.set({ "bsfw-activated": false }).then(() => {
+    changeTitleColor();
   }).catch((error) => {
     console.error("Error setting activation state:", error);
   });
@@ -161,6 +163,23 @@ browser.storage.local.get("bsfw-blocking-text").then((result) => {
     });
   }
 });
+
+// COLOR
+
+// Set the color if the block is activated or not.
+function changeTitleColor() {
+  browser.storage.local.get("bsfw-activated").then((result) => {
+    const activated = result["bsfw-activated"];
+    const title = document.getElementById("title");
+    if(activated) {
+      title.style.color = "#38761D"
+    } else {
+      title.style.color = "#CC0000"
+    }
+  });
+}
+
+changeTitleColor();
 
 // MISC FUNCTIONS
 function getCurrentTime() {
