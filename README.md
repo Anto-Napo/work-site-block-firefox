@@ -1,7 +1,7 @@
 # Block Sites For Work
 
 ## Overview
-*Block Sites For Work* remove the ability to access the following websites by blocking their content from appearing, so it enables you to work with fewer distractions whenever you want: YouTube, GitHub, Twitch, Poki, FRVR, Steam, Reddit, Discord, Speedrun, Facebook, X, Instagra, Tumblr, Snapchat, Netflix, Hulu, Amazon, Crunchyroll, Vimeo, Buzzfeed, Ycombinator, Digg, Ebay, Etsy, Aliexpress, 9gag, Cheezburger, Ifunny, Miniclip and Kongregate. Three languages are available : english, french and spanish.
+*Block Sites For Work* removes the ability to access various distracting websites, helping you stay focused on work. It blocks the content of these sites from appearing, so you can work with fewer interruptions whenever you want. The sites it can block include: YouTube, GitHub, Twitch, Poki, VR sites, Steam, Reddit, Discord, Speedrun, Facebook, X (Twitter), Instagram, Tumblr, Snapchat, Netflix, Hulu, Amazon, Crunchyroll, Vimeo, Buzzfeed, YCombinator, Digg, eBay, Etsy, Aliexpress, 9gag, Cheezburger, Ifunny, Miniclip, Kongregate, Pornhub, Y8, CrazyGames, Kodub, Shellshock, Voodoo Games, Neal.fun, Doodle Jump, Scan Manga, Jeux, 1001 Jeux, JeuxJeux, Kekma, BrawlTime, BrawlStats, SMBGames, SuperMarioPlay and Chess. Three languages are available: English, French, and Spanish.
 
 ## Installation for developpers
 To install the *Block Sites For Work* extension, follow these steps:
@@ -90,3 +90,9 @@ Complete license in the link bellow or in the [license file](LICENSE).
 ### V2.3
 
 * Fixed an issue where default values were set on updates.
+
+### V2.4
+
+* Added more websites.
+
+* Fixed an issue where some websites don't begin by *www*, so the blocking wouldn't work.
