@@ -85,4 +85,8 @@ Complete license in the link bellow or in the [license file](LICENSE).
 
 * Added color change for the title depending on the state of the block.
 
-* Changed the description
+* Changed the description.
+
+### V2.3
+
+* Fixed an issue where default values were set on updates.
