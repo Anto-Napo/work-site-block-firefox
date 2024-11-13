@@ -106,7 +106,11 @@ document.getElementById('forcedActivateButton').addEventListener('click', () => 
     const endTime = currentTime + time; // Get the endtime
     browser.storage.local.set({ "bsfw-blocking-endtime": endTime }).then(() => {
       browser.storage.local.set({ "bsfw-activated": true }).then(() => {
-        window.close();
+        browser.storage.local.set({ "bsfw-blocking-text": dropdown.value }).then(() => {
+          window.close();
+        }).catch((error) => {
+          console.error("Error activating the block:", error);
+        });
       }).catch((error) => {
         console.error("Error activating the block:", error);
       });
@@ -126,6 +130,7 @@ browser.storage.local.get(["bsfw-blocking", "bsfw-blocking-endtime"]).then((resu
     if (getCurrentTime() >= endtime) {
       browser.storage.local.set({ "bsfw-blocking": false }).then(() => {
         browser.storage.local.set({ "bsfw-activated": false }).then(() => { // In case no webpage has been refreshed or accessed (see index.js)
+          title.style.color = "#CC0000"; // Set the color so it doesn't appear in the wrong one
         }).catch((error) => {
           console.error("Error activating the block:", error);
         });
@@ -136,13 +141,16 @@ browser.storage.local.get(["bsfw-blocking", "bsfw-blocking-endtime"]).then((resu
       browser.storage.local.get("bsfw-language").then((result) => {
         const language = result["bsfw-language"];
         const time = secondsToTime(endtime);
-        let text = `<p>The content is blocked until <b>${time}</b>.</p>`;
+        let text = `<p class="blocked">The content is blocked until <b>${time}</b>.</p>`;
         if(language == "es") {
-          text = `<p>El contenido est&aacute; bloqueado hasta <b>${time}</b>.</p>`;
+          text = `<p class="blocked">El contenido est&aacute; bloqueado hasta:<br><b>${time}</b></p>
+                  <a class="part block-issue" id="link" href="https://github.com/Anto-Napo/work-site-block-firefox/issues">&iquest;Alguna pregunta? &iexcl;Simplemente crea un issue!</a>`;
         } else if (language == "fr") {
-          text = `<p>Le contenu est bloqu&eacute; jusqu'&agrave; <b>${time}</b>.</p>`;
+          text = `<p class="blocked">Le contenu est bloqu&eacute; jusqu'&agrave;:<br><b>${time}</b></p>
+                  <a class="part block-issue" id="link" href="https://github.com/Anto-Napo/work-site-block-firefox/issues">Des questions? Cr&eacute;e simplement une issue!</a>`;
         }else if (language == "en") {
-          text = `<p>The content is blocked until <b>${time}</b>.</p>`;
+          text = `<p class="blocked">The content is blocked until:<br><b>${time}</b></p>
+                  <a class="part block-issue" id="link" href="https://github.com/Anto-Napo/work-site-block-firefox/issues">Any questions? Just create an issue!</a>`;
         }
         document.getElementById('content').innerHTML = text;
       });
@@ -172,9 +180,9 @@ function changeTitleColor() {
     const activated = result["bsfw-activated"];
     const title = document.getElementById("title");
     if(activated) {
-      title.style.color = "#38761D"
+      title.style.color = "#38761D";
     } else {
-      title.style.color = "#CC0000"
+      title.style.color = "#CC0000";
     }
   });
 }

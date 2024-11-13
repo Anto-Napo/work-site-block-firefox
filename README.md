@@ -1,7 +1,7 @@
 # Block Sites For Work
 
 ## Overview
-*Block Sites For Work* removes the ability to access various distracting websites, helping you stay focused on work. It blocks the content of these sites from appearing, so you can work with fewer interruptions whenever you want. The sites it can block include: YouTube, GitHub, Twitch, Poki, VR sites, Steam, Reddit, Discord, Speedrun, Facebook, X (Twitter), Instagram, Tumblr, Snapchat, Netflix, Hulu, Amazon, Crunchyroll, Vimeo, Buzzfeed, YCombinator, Digg, eBay, Etsy, Aliexpress, 9gag, Cheezburger, Ifunny, Miniclip, Kongregate, Pornhub, Y8, CrazyGames, Kodub, Shellshock, Voodoo Games, Neal.fun, Doodle Jump, Scan Manga, Jeux, 1001 Jeux, JeuxJeux, Kekma, BrawlTime, BrawlStats, SMBGames, SuperMarioPlay and Chess. Three languages are available: English, French, and Spanish.
+*Block Sites For Work* removes the ability to access various distracting websites, helping you stay focused on work. It blocks the content of these sites from appearing, so you can work with fewer interruptions whenever you want. The sites it can block include: YouTube, GitHub, Twitch, Poki, FRVR, Steam, Reddit, Discord, Speedrun, Facebook, X (Twitter), Instagram, Tumblr, Snapchat, Netflix, Hulu, Amazon, Crunchyroll, Vimeo, Buzzfeed, YCombinator, Digg, eBay, Etsy, Aliexpress, 9gag, Cheezburger, Ifunny, Miniclip, Kongregate, Pornhub, Y8, CrazyGames, Kodub, Shellshock, Voodoo Games, Neal.fun, Doodle Jump, Scan Manga, Jeux, 1001 Jeux, JeuxJeux, Kekma, BrawlTime, BrawlStats, SMBGames, SuperMarioPlay and Chess. Three languages are available: English, French, and Spanish.
 
 ## Installation for developpers
 To install the *Block Sites For Work* extension, follow these steps:
@@ -96,3 +96,13 @@ Complete license in the link bellow or in the [license file](LICENSE).
 * Added more websites.
 
 * Fixed an issue where some websites don't begin by *www*, so the blocking wouldn't work.
+
+### V2.5
+
+* Added the issue text in the blocked page.
+
+* Changed the design of the blocked page.
+
+* Fixed an issue where the last blocked time wasn't set.
+
+* Fixed an issue where the color wouldn't instantly be set to red after the end of the blocking.

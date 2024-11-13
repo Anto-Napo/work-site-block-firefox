@@ -29,3 +29,16 @@ body {
 .part {
   margin: 12px 0;
 }
+
+.blocked {
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+.blocked b {
+  font-size: inherit;
+}
+
+.block-issue {
+  font-size: 13px;
+}
