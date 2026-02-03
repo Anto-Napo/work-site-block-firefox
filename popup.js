@@ -73,8 +73,8 @@ document.getElementById('languageDropdown').addEventListener('change', function(
 // FORCED ACTIVATION
 
 // Showing the last activation time
-browser.storage.local.get("bsfw-blocking-text").then((result) => {
-  const text = result["bsfw-blocking-text"];
+browser.storage.local.get("bsfw-end-blocking-text").then((result) => {
+  const text = result["bsfw-end-blocking-text"];
 
   const dropdown = document.getElementById('forcedDropdown');
   dropdown.value = text;
@@ -97,16 +97,17 @@ function getActivationTime(time) {
   return timeMap[time] || null;
 }
 
+// Blocking
 document.getElementById('forcedActivateButton').addEventListener('click', () => {
   browser.storage.local.set({ "bsfw-blocking": true }).then(() => {
     const dropdown = document.getElementById('forcedDropdown');
     const baseTime = dropdown.value;
     const time = getActivationTime(baseTime);
     const currentTime = getCurrentTime();
-    const endTime = currentTime + time; // Get the endtime
-    browser.storage.local.set({ "bsfw-blocking-endtime": endTime }).then(() => {
-      browser.storage.local.set({ "bsfw-activated": true }).then(() => {
-        browser.storage.local.set({ "bsfw-blocking-text": dropdown.value }).then(() => {
+    const endTime = currentTime + time;
+    browser.storage.local.set({ "bsfw-blocking-endtime": endTime }).then(() => { // Setting endtime
+      browser.storage.local.set({ "bsfw-activated": true }).then(() => { // Setting activation state to true
+        browser.storage.local.set({ "bsfw-end-blocking-text": dropdown.value }).then(() => { // Setting endtime text
           window.close();
         }).catch((error) => {
           console.error("Error activating the block:", error);
@@ -142,16 +143,20 @@ browser.storage.local.get(["bsfw-blocking", "bsfw-blocking-endtime"]).then((resu
         const language = result["bsfw-language"];
         const time = secondsToTime(endtime);
         let text = `<p class="blocked">The content is blocked until <b>${time}</b>.</p>`;
-        if(language == "es") {
-          text = `<p class="blocked">El contenido est&aacute; bloqueado hasta:<br><b>${time}</b></p>
-                  <a class="part block-issue" id="link" href="https://github.com/Anto-Napo/work-site-block-firefox/issues">&iquest;Alguna pregunta? &iexcl;Simplemente crea un issue!</a>`;
-        } else if (language == "fr") {
-          text = `<p class="blocked">Le contenu est bloqu&eacute; jusqu'&agrave;:<br><b>${time}</b></p>
-                  <a class="part block-issue" id="link" href="https://github.com/Anto-Napo/work-site-block-firefox/issues">Des questions? Cr&eacute;e simplement une issue!</a>`;
-        }else if (language == "en") {
-          text = `<p class="blocked">The content is blocked until:<br><b>${time}</b></p>
-                  <a class="part block-issue" id="link" href="https://github.com/Anto-Napo/work-site-block-firefox/issues">Any questions? Just create an issue!</a>`;
+        switch (language) {
+          case 'es':
+            text = `<p class="blocked">El contenido est&aacute; bloqueado hasta:<br><b>${time}</b></p><a class="part block-issue" id="link" href="https://github.com/Anto-Napo/work-site-block-firefox/issues">&iquest;Alguna pregunta? &iexcl;Simplemente crea un issue!</a>`;
+            break;
+          case 'fr':
+            text = `<p class="blocked">Le contenu est bloqu&eacute; jusqu'&agrave;:<br><b>${time}</b></p><a class="part block-issue" id="link" href="https://github.com/Anto-Napo/work-site-block-firefox/issues">Des questions? Cr&eacute;e simplement une issue!</a>`;
+            break;
+          case 'en':
+            text = `<p class="blocked">The content is blocked until:<br><b>${time}</b></p><a class="part block-issue" id="link" href="https://github.com/Anto-Napo/work-site-block-firefox/issues">Any questions? Just create an issue!</a>`;
+            break;
+          default:
+            text = "<p>PLEASE REPORT THIS AS <b>ERRORTXTCONTENTBLOCKED</b></p>";
         }
+        
         document.getElementById('content').innerHTML = text;
       });
       
@@ -160,11 +165,11 @@ browser.storage.local.get(["bsfw-blocking", "bsfw-blocking-endtime"]).then((resu
 });
 
 // If the value of the dropdown is somehow empty
-browser.storage.local.get("bsfw-blocking-text").then((result) => {
-  const text = result["bsfw-blocking-text"];
+browser.storage.local.get("bsfw-end-blocking-text").then((result) => {
+  const text = result["bsfw-end-blocking-text"];
   const dropdown = document.getElementById('forcedDropdown');
   if(!text) {
-    browser.storage.local.set({ "bsfw-blocking-text": "30s" }).then(() => {
+    browser.storage.local.set({ "bsfw-end-blocking-text": "30s" }).then(() => {
       dropdown.value = "30s";
     }).catch((error) => {
       console.error("Error activating the block:", error);
